@@ -13,12 +13,13 @@ const Navbar = () => {
   return (
     <nav className="w-full flex md:justify-center justify-between items-center p-4">
       <div className="md:flex-[0.5] flex-initial justify-center items-center">
-        {/* <img src={logo} alt="logo" className="w-32 cursor-pointer" /> */}
-        <p className="font-bold text-xl w-32 cursor-pointer text-white">
-          FUNDWAVE
-        </p>
+        <div className="font-bold text-xl w-32 cursor-pointer text-white">
+        <Link to='/' >FUNDWAVE</Link>
+        </div>
       </div>
-      {/* <button className="text-white cursor-pointer">Transfer</button> */}
+      <div className="text-white cursor-pointer">
+      <Link to="/transfer" >Transfer</Link>
+      </div>
       <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
         {["Transactions", "About"].map((item, index) => (
           <NavBarItem key={item + index} title={item} />
